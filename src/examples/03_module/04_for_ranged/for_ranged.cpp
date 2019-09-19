@@ -29,6 +29,22 @@ s
 t
 */
 
+void loop_string_w_auto(std::string str,std::string &str1)
+{
+	//not modifiable
+	for (auto ch : str)
+	{
+		ch = 'j';
+		std::cout << ch << "\n";
+	}
+	//modifiable
+	for (auto &ch : str)
+	{
+		ch = 'j';
+		std::cout << ch << "\n";
+	}
+}
+
 
 void loop_vector_w_index() 
 {
