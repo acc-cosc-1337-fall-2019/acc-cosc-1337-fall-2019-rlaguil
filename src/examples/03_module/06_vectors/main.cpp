@@ -8,5 +8,6 @@ int main()
 	loop_vector_w_index_ref(nums);
 	loop_vector_w_index_const(nums);
 	loop_vector_w_for_ranged(nums);
+	//loop_vector_w_for_ranged_ref_var(nums);
 	return 0;
 }
