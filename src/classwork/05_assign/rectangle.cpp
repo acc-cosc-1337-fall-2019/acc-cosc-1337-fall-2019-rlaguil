@@ -9,12 +9,12 @@ that calculates area of the rectangle.  The class has 3 int private variables ar
 */
 
 
-int DaRectangle::get_area() const
+int acc:: DaRectangle::get_area() const
 {
 	return area;
 }
 
-void DaRectangle::calculate_area()
+void acc:: DaRectangle::calculate_area()
 {
 	if (width > 0 && height > 0)
 	{

@@ -9,7 +9,7 @@ TEST_CASE("Verify Test Configuration", "verification") {
 
 TEST_CASE("Test Ractangle initalizer")
 {
-	DaRectangle r(4,5);
+	acc::DaRectangle r(4,5);
 
 	REQUIRE(r.get_area() == 20);
 }
