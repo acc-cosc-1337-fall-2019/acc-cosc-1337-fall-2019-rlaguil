@@ -2,6 +2,7 @@
 #include <vector>
 #include <iostream>
 #include"customer.h"
+#include"checking_account.h"
 
 
 using std::cout; using std::vector; using std::cin;
@@ -14,13 +15,10 @@ int main()
 	//get  customer record from db into a vector
 	vector<BankAccount>accounts{ BankAccount(500),BankAccount(500),BankAccount(600),
 	BankAccount(1000)};*/
-	Customer customer;
-	customer.add_account(BankAccount(500));
-	customer.add_account(BankAccount(1500));
-	customer.add_account(BankAccount(5000));
+	CheckingAccount a;
+	cout << a.get_balance();
 
-	cout << customer;
-
+	CheckingAccount a(1500);
 	/*BankAccount account(9000);
 	ATM atm(account);
 	atm.deposit(100);

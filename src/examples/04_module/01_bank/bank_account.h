@@ -5,13 +5,16 @@ class BankAccount
 {
 public:
 	BankAccount();
-	BankAccount(int b) : balance(b) {}; //inline constuctor
+	int get_balance() const; //const makes class members read only
 	void deposit(int amount);
 	void withdraw(int amount);
-	int get_balance() const; //const makes class members read only
+	BankAccount(int b) : balance(b) {}; //inline constuctor
+	friend void display(const BankAccount& account);
+	friend std:ostream & operator<<(std::ostream & out, const BankAccount & b);
+	friend std::istream &operator >> (std::istream & in, BankAccount & b);
 
-private:
+protected:
 	int balance;
-
+	
 };
 #endif
