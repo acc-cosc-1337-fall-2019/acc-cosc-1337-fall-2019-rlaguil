@@ -1,3 +1,4 @@
+#include "tic_tac_toe.h"
 //cpp
 #include<iostream>
 #include "tic_tac_toe.h"
@@ -127,4 +128,21 @@ bool TicTacToe::check_board_full()
 	}
 
 	return true;
+}
+
+void TicTacToe::set_winner()
+{
+	if (next_player == "X")
+	{
+		winner = "O";
+	}
+	else
+	{
+		winner = "X";
+	}
+}
+
+string TicTacToe::get_winner() const
+{
+	return winner;
 }
