@@ -21,11 +21,11 @@ int main()
 
 		if (game_type == 3)
 		{
-			game = new TicTacToe3; //dynamic mem
+			game = new TicTacToe3(); //dynamic mem
 		}
 		else
 		{
-			game = new TicTacToe4;
+			game = new TicTacToe4();
 
 		}
 
