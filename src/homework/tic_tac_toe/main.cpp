@@ -4,15 +4,16 @@
 #include<iostream>
 #include<string>
 
+
 using std::cout; using std::cin; using std::string;
 
 int main() 
 {//TicTacTow3 three;
 	char cont = 'y';
-	TicTacToeManager manager;	
+	unique_ptr<TicTacToeManager> manager= std::make_unique<TicTacToeManager>();	
 	string player;
 	int game_type;
-	TicTacToe* game; // pointer
+	unique_ptr<TicTacToe> game; // pointer
 
 	do 
 	{
@@ -21,11 +22,11 @@ int main()
 
 		if (game_type == 3)
 		{
-			game = new TicTacToe3(); //dynamic mem
+			game = std::make_unique<TicTacToe3>(); //dynamic mem
 		}
 		else
 		{
-			game = new TicTacToe4();
+			game = std::make_unique<TicTacToe4>();
 
 		}
 
@@ -42,7 +43,7 @@ int main()
 			cout<<*game;
 		}
 
-		manager.save_game(*game);
+		manager->save_game(game);
 	
 		cout << "Game over: ";
 
@@ -52,7 +53,7 @@ int main()
 	} while (cont == 'y' || cont == 'Y');
 
 	cout << "History: /n";
-	cout << manager;
+	cout << *manager;
 
 	return 0;
 }
