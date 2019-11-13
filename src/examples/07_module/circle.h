@@ -1,11 +1,14 @@
 //circle.h
-#include "shape.h"
-#ifndef CIRCLE_H
-#define CIRCLE_H
+#ifndef  CIRCLE_H
+#define  CIRCLE_H
 
-class Circle : public Shape
+#include"../07_module/shape.h"
+namespace mod7ex
 {
-public:
-	void draw() override;
-};
-#endif
+	class Circle : public Shape
+	{
+	public:
+		void draw() override;
+	};
+}
+#endif // ! CIRCLE_h
