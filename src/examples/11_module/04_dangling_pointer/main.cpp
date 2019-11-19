@@ -3,6 +3,6 @@
 int main() 
 {
 	
-
+	dangling_pointer();
 	return 0;
 }
