@@ -9,5 +9,5 @@
 #ADD_SUBDIRECTORY(09_assign_test)
 #ADD_SUBDIRECTORY(10_assign_test)
 #ADD_SUBDIRECTORY(11_assign_test)
-ADD_SUBDIRECTORY(12_assign_test)
-#ADD_SUBDIRECTORY(13_assign_test)
+#ADD_SUBDIRECTORY(12_assign_test)
+ADD_SUBDIRECTORY(13_assign_test)
